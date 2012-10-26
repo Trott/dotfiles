@@ -5,9 +5,20 @@ export PATH="$HOME/bin:$PATH"
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && source "$file"
+    [ -r "$file" ] && source "$file"
 done
 unset file
+
+# install z if it is not already installed
+if [ ! -e ~/code/z/z.sh ]
+    then
+        mkdir -p ~/code/z
+        curl https://raw.github.com/rupa/z/master/z.sh > ~/code/z/z.sh
+        chmod +x ~/code/z/z.sh
+fi
+
+# z
+. ~/code/z/z.sh
  
 export NODE_PATH=/usr/local/lib/node_modules
 
