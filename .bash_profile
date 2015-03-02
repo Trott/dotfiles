@@ -20,8 +20,6 @@ fi
 # z
 . ~/code/z/z.sh
  
-export NODE_PATH=/usr/local/lib/node_modules
-
 if [ -e ~/.node-completion ]
     then
 # {{{
@@ -34,4 +32,6 @@ done
 # }}}
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
