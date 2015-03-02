@@ -13,7 +13,7 @@ unset file
 if [ ! -e ~/code/z/z.sh ]
     then
         mkdir -p ~/code/z
-        curl https://raw.github.com/rupa/z/master/z.sh > ~/code/z/z.sh
+        curl https://raw.githubusercontent.com/rupa/z/master/z.sh > ~/code/z/z.sh
         chmod +x ~/code/z/z.sh
 fi
 
