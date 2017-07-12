@@ -1,0 +1,3 @@
+alias subl="open -a 'Sublime Text 2'"
+alias up="z io.js && git checkout master && git pull && git fetch upstream && git rebase upstream/master && git status"
+alias node-update="nvm install node --reinstall-packages-from=node"
