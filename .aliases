@@ -1,5 +1,5 @@
 alias subl="open -a 'Sublime Text 2'"
 alias up="z io.js && git checkout master && git pull && git fetch upstream && git rebase upstream/master && git status"
-alias node-update="nvm install node --reinstall-packages-from=node"
+alias node-update="nvm install node --reinstall-packages-from=node --latest-npm"
 alias update-node=node-update
 alias check='function _check(){ z io.js && git log | egrep ^commit | head -n "${1-10}" | cut -d" " -f2 | xargs -n 1 core-validate-commit; }; _check'
