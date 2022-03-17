@@ -1,5 +1,9 @@
-alias subl="open -a 'Sublime Text 2'"
 alias up="z io.js && git checkout master && git pull && git fetch upstream && git rebase upstream/master && git status"
 alias node-update="nvm install node --reinstall-packages-from=node --latest-npm"
 alias update-node=node-update
-alias check='function _check(){ z io.js && git log | egrep ^commit | head -n "${1-10}" | cut -d" " -f2 | xargs -n 1 core-validate-commit; }; _check'
+alias check='function _check(){ z io.js && git log | egrep ^commit | head -n "${1-10}" | cut -d" " -f2 | xargs -n 1 npx core-validate-commit; }; _check'
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+alias python=python3
+alias daily-update="~/code/daily-update/daily-update.sh"
+alias 6mosr="~/code/node-stats/6mosr.sh"
+alias start="open https://outlook.office.com/mail/inbox https://outlook.office.com/calendar/view/workweek https://teams.microsoft.com/ https://to-do.office.com/tasks/inbox"
